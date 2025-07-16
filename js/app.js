@@ -16,12 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const uiManager = new UIManager();
     const musicEngine = new MusicEngine(uiManager);
 
-    // --- Define Song Data ---
+    // --- Define Song Data with Hand Information ---
     const sampleSong = [
-        { keys: ["c/4"], duration: "q" }, { keys: ["d/4"], duration: "q" },
-        { keys: ["e/4"], duration: "q" }, { keys: ["f/4"], duration: "q" },
-        { keys: ["g/4"], duration: "q" }, { keys: ["a/4"], duration: "q" },
-        { keys: ["b/4"], duration: "q" }, { keys: ["c/5"], duration: "w" },
+        // Measure 1
+        { keys: ["c/4"], duration: "q", hand: "right" },
+        { keys: ["c/3"], duration: "q", hand: "left" },
+        { keys: ["d/4"], duration: "q", hand: "right" },
+        { keys: ["d/3"], duration: "q", hand: "left" },
+        // Measure 2
+        { keys: ["e/4"], duration: "q", hand: "right" },
+        { keys: ["e/3"], duration: "q", hand: "left" },
+        { keys: ["f/4"], duration: "q", hand: "right" },
+        { keys: ["f/3"], duration: "q", hand: "left" },
     ];
     musicEngine.loadSong(sampleSong);
 
