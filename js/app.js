@@ -6,12 +6,12 @@ console.log("App started. Waiting for page to load.");
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM fully loaded and parsed.");
-    
-    // --- DOM Element References ---
-    const playBtn = document.getElementById('play-pause-btn');
-    const stopBtn = document.getElementById('stop-btn');
 
-    // --- Define Sample Song ---
+    // Initialize all the core components
+    const uiManager = new UIManager();
+    const musicEngine = new MusicEngine(uiManager);
+
+    // Define our sample song
     const sampleSong = [
         { keys: ["c/4"], duration: "q" },
         { keys: ["d/4"], duration: "q" },
@@ -23,33 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { keys: ["c/5"], duration: "w" },
     ];
 
-    // --- Initialize Core Components ---
-    const uiManager = new UIManager();
-    const musicEngine = new MusicEngine(uiManager, () => {
-        console.log("Sampler loaded, loading song...");
-        musicEngine.loadSong(sampleSong);
-    });
+    // Load the song into the engine
+    musicEngine.loadSong(sampleSong);
 
-    // --- MIDI Input Handler ---
+    // The MIDI handler will call this function whenever a note is played
     const onNotePlayed = (note, velocity) => {
-        // Resume AudioContext on user interaction
-        if (Tone.context.state !== 'running') {
-            Tone.context.resume();
-        }
         musicEngine.handleNoteInput(note, velocity);
     };
+
+    // Initialize MIDI and pass the callback function
     initializeMIDI(onNotePlayed);
 
-    // --- UI Event Listeners ---
-    playBtn.addEventListener('click', () => {
-        // Resume AudioContext on user interaction
-        if (Tone.context.state !== 'running') {
-            Tone.context.resume();
-        }
-        musicEngine.play();
-    });
-
-    stopBtn.addEventListener('click', () => {
-        musicEngine.stop();
-    });
+    // TODO: Set up UI event listeners (buttons, sliders)
 });

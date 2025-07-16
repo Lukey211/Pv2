@@ -15,7 +15,7 @@ export class UIManager {
         const renderer = new VF.Renderer(this.sheetMusicDiv, VF.Renderer.Backends.SVG);
         renderer.resize(500, 150);
         const context = renderer.getContext();
-        const stave = new VF.Stave(10, 40, 480); // Made stave wider
+        const stave = new VF.Stave(10, 40, 480);
 
         stave.addClef("treble").addTimeSignature("4/4");
         stave.setContext(context).draw();
@@ -28,7 +28,8 @@ export class UIManager {
             return staveNote;
         });
 
-        // Use a helper to automatically format and draw the notes.
+        // Use VexFlow's helper to automatically format, justify, and draw the notes.
+        // This is more robust than creating a voice with a fixed beat count.
         VF.Formatter.FormatAndDraw(context, stave, staveNotes);
 
         console.log(`Sheet music drawn, highlighting note ${highlightedNoteIndex}`);
