@@ -1,9 +1,9 @@
 // This file will handle all MIDI communication.
 
-let onNoteCallback = null;
+let noteCallback = null;
 
 export function initializeMIDI(callback) {
-    onNoteCallback = callback;
+    noteCallback = callback;
     if (navigator.requestMIDIAccess) {
         navigator.requestMIDIAccess()
             .then(onMIDISuccess, onMIDIFailure);
@@ -36,10 +36,15 @@ function onMIDIFailure() {
 
 function getMIDIMessage(message) {
     const [command, note, velocity] = message.data;
-    // command 144 = noteOn
+
+    // command 144 = noteOn, command 128 = noteOff
     if (command === 144 && velocity > 0) {
-        if (onNoteCallback) {
-            onNoteCallback(note, velocity);
+        if (noteCallback) {
+            noteCallback(note, true); // Note On
+        }
+    } else if (command === 128 || (command === 144 && velocity === 0)) {
+        if (noteCallback) {
+            noteCallback(note, false); // Note Off
         }
     }
 }

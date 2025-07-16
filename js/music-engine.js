@@ -1,14 +1,14 @@
 // This is the brain of the application.
 
 export class MusicEngine {
-    constructor(uiManager) {
+    constructor(uiManager, keyboardManager) {
         this.uiManager = uiManager;
+        this.keyboardManager = keyboardManager;
         this.song = null;
         this.currentNoteIndex = 0;
         this.playbackState = 'stopped';
         this.songPart = null;
 
-        // The base BPM for our application (a common default)
         this.baseBPM = 120;
         Tone.Transport.bpm.value = this.baseBPM;
 
@@ -46,6 +46,7 @@ export class MusicEngine {
         this.currentNoteIndex = 0;
         this.uiManager.drawSong(this.song, this.currentNoteIndex);
         this.playbackState = 'waiting';
+        this.updateKeyboardForNextNote();
         console.log("Song loaded and first note highlighted.");
     }
 
@@ -53,9 +54,9 @@ export class MusicEngine {
         if (!this.song || this.playbackState === 'playing') {
             return;
         }
-
         this.stop();
         this.playbackState = 'playing';
+        this.keyboardManager.clearAllHighlights('blue');
 
         let cumulativeTime = 0;
         const partEvents = this.song.map((note, index) => {
@@ -71,20 +72,17 @@ export class MusicEngine {
         });
 
         this.songPart = new Tone.Part((time, value) => {
-            const noteName = value.note.keys[0].replace('/', '').toUpperCase();
+            const noteName = this.vexflowToTone(value.note.keys[0]);
             this.sampler.triggerAttackRelease(noteName, value.duration, time);
             
             Tone.Draw.schedule(() => {
                 this.uiManager.drawSong(this.song, value.index);
+                this.keyboardManager.highlightNextNote(this.vexflowToTone(value.note.keys[0]));
             }, time);
         }, partEvents).start(0);
 
         Tone.Transport.start();
-        
-        Tone.Transport.scheduleOnce(() => {
-            this.stop();
-        }, cumulativeTime);
-
+        Tone.Transport.scheduleOnce(() => this.stop(), cumulativeTime);
         console.log("Playback started.");
     }
 
@@ -98,43 +96,61 @@ export class MusicEngine {
         this.playbackState = 'stopped';
         this.currentNoteIndex = 0;
         this.uiManager.drawSong(this.song, -1);
+        this.keyboardManager.clearAllHighlights('blue');
         console.log("Playback stopped.");
     }
     
     setTempo(rate) {
-        // This is the corrected logic for tempo control
         Tone.Transport.bpm.value = this.baseBPM * rate;
         console.log(`Tempo set to: ${Tone.Transport.bpm.value.toFixed(2)} BPM`);
     }
 
-    handleNoteInput(midiNote, velocity) {
+    handleUserKeyPress(midiNote, isNoteOn) {
         const noteName = Tone.Midi(midiNote).toNote();
-        this.sampler.triggerAttackRelease(noteName, "8n");
+        this.keyboardManager.setUserPress(noteName, isNoteOn);
+        if (isNoteOn) {
+            this.sampler.triggerAttackRelease(noteName, "8n");
+        }
+    }
 
+    handleNoteInput(midiNote) {
         if (this.playbackState !== 'waiting' || !this.song) {
             return;
         }
-
         const expectedNote = this.song[this.currentNoteIndex];
         const playedNoteName = this.midiToVexflow(midiNote);
         const expectedNoteName = expectedNote.keys[0].split('/')[0];
-
+        
         if (playedNoteName.startsWith(expectedNoteName)) {
+            this.keyboardManager.showCorrectPress(Tone.Midi(midiNote).toNote());
             this.currentNoteIndex++;
             if (this.currentNoteIndex >= this.song.length) {
                 console.log("Song finished!");
                 this.playbackState = 'stopped';
                 this.uiManager.drawSong(this.song, -1);
+                this.keyboardManager.clearAllHighlights('blue');
                 return;
             }
             this.uiManager.drawSong(this.song, this.currentNoteIndex);
+            this.updateKeyboardForNextNote();
+        } else {
+            this.keyboardManager.showIncorrectPress(Tone.Midi(midiNote).toNote());
         }
     }
 
+    updateKeyboardForNextNote() {
+        if(this.song && this.song[this.currentNoteIndex]) {
+            const nextNoteName = this.vexflowToTone(this.song[this.currentNoteIndex].keys[0]);
+            this.keyboardManager.highlightNextNote(nextNoteName);
+        }
+    }
+
+    // --- Helper Functions ---
     midiToVexflow(midiNote) {
-        const noteNames = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
-        const octave = Math.floor(midiNote / 12) - 1;
-        const noteName = noteNames[midiNote % 12];
-        return `${noteName}/${octave}`;
+        return Tone.Midi(midiNote).toNote().replace(/(\w)(\d)/, '$1/$2').toLowerCase();
+    }
+
+    vexflowToTone(vfNote) {
+        return vfNote.replace('/', '').toUpperCase();
     }
 }

@@ -1,0 +1,57 @@
+#keyboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    overflow-x: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.keyboard {
+    display: flex;
+    position: relative;
+}
+
+.key {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    border-radius: 0 0 5px 5px;
+    transition: background-color 0.1s ease;
+}
+
+.key.white {
+    width: 50px;
+    height: 220px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.key.black {
+    width: 30px;
+    height: 140px;
+    background-color: #222;
+    position: absolute;
+    margin-left: -15px;
+    z-index: 2;
+}
+
+/* --- Color States --- */
+.key.blue {
+    background-color: #87ceeb; /* Sky Blue */
+}
+
+.key.green {
+    background-color: #90ee90; /* Light Green */
+}
+
+.key.red {
+    background-color: #f08080; /* Light Coral */
+}
+
+.key.orange {
+    background-color: #ffa500; /* Orange */
+}
