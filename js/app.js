@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Get DOM Elements ---
     const playBtn = document.getElementById('play-pause-btn');
     const stopBtn = document.getElementById('stop-btn');
+    const tempoSlider = document.getElementById('tempo-slider');
 
     // --- Initialize Core Components ---
     const uiManager = new UIManager();
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- MIDI Handling ---
     const onNotePlayed = (note, velocity) => {
-        // This is a good place to start the audio context if it's not running
         if (Tone.context.state !== 'running') {
             Tone.start();
         }
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- UI Event Listeners ---
     playBtn.addEventListener('click', async () => {
-        // Audio must be started by a user gesture. This is the perfect place.
         if (Tone.context.state !== 'running') {
             await Tone.start();
             console.log("AudioContext started!");
@@ -46,5 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     stopBtn.addEventListener('click', () => {
         musicEngine.stop();
+    });
+
+    tempoSlider.addEventListener('input', () => {
+        const tempoRate = parseFloat(tempoSlider.value);
+        musicEngine.setTempo(tempoRate);
     });
 });

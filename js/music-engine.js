@@ -5,8 +5,12 @@ export class MusicEngine {
         this.uiManager = uiManager;
         this.song = null;
         this.currentNoteIndex = 0;
-        this.playbackState = 'stopped'; // 'stopped', 'playing', 'paused', 'waiting'
-        this.scheduledEvents = []; // To keep track of scheduled Tone.js events
+        this.playbackState = 'stopped';
+        this.songPart = null;
+
+        // The base BPM for our application (a common default)
+        this.baseBPM = 120;
+        Tone.Transport.bpm.value = this.baseBPM;
 
         this.sampler = new Tone.Sampler({
             urls: {
@@ -27,12 +31,10 @@ export class MusicEngine {
         }).toDestination();
     }
 
-    // Helper to convert VexFlow duration to Tone.js time
     durationToTone(duration) {
         const map = {
             'w': '1n', 'h': '2n', 'q': '4n', '8': '8n', '16': '16n', '32': '32n'
         };
-        // Add support for dotted notes
         if (duration.includes('d')) {
             return map[duration.replace('d', '')] + '.';
         }
@@ -48,54 +50,64 @@ export class MusicEngine {
     }
 
     play() {
-            if (!this.song || this.playbackState === 'playing') {
-                return;
-            }
-
-            this.stop(); // Clear any previous playback state
-            this.playbackState = 'playing';
-            let time = 0; // Use a relative time offset for the transport
-
-            this.song.forEach((note, index) => {
-                const toneDuration = this.durationToTone(note.duration);
-
-                // Schedule the audio and the visual update together
-                const eventId = Tone.Transport.schedule(t => {
-                    // FIX: Convert VexFlow note "c/4" to Tone.js note "C4"
-                    const noteName = note.keys[0].replace('/', '').toUpperCase();
-                    this.sampler.triggerAttackRelease(noteName, toneDuration, t);
-                    
-                    Tone.Draw.schedule(() => {
-                        this.uiManager.drawSong(this.song, index);
-                    }, t);
-                }, time);
-
-                this.scheduledEvents.push(eventId);
-                time += Tone.Time(toneDuration).toSeconds();
-            });
-
-            // Schedule an event to stop everything at the end
-            const endEvent = Tone.Transport.schedule(t => {
-                this.stop();
-            }, time);
-            this.scheduledEvents.push(endEvent);
-
-            Tone.Transport.start();
-            console.log("Playback started.");
+        if (!this.song || this.playbackState === 'playing') {
+            return;
         }
+
+        this.stop();
+        this.playbackState = 'playing';
+
+        let cumulativeTime = 0;
+        const partEvents = this.song.map((note, index) => {
+            const durationInSeconds = Tone.Time(this.durationToTone(note.duration)).toSeconds();
+            const event = {
+                time: cumulativeTime,
+                note: note,
+                index: index,
+                duration: durationInSeconds
+            };
+            cumulativeTime += durationInSeconds;
+            return event;
+        });
+
+        this.songPart = new Tone.Part((time, value) => {
+            const noteName = value.note.keys[0].replace('/', '').toUpperCase();
+            this.sampler.triggerAttackRelease(noteName, value.duration, time);
+            
+            Tone.Draw.schedule(() => {
+                this.uiManager.drawSong(this.song, value.index);
+            }, time);
+        }, partEvents).start(0);
+
+        Tone.Transport.start();
+        
+        Tone.Transport.scheduleOnce(() => {
+            this.stop();
+        }, cumulativeTime);
+
+        console.log("Playback started.");
+    }
 
     stop() {
         Tone.Transport.stop();
-        Tone.Transport.cancel(); // Clear all scheduled events
-        this.scheduledEvents = [];
+        if (this.songPart) {
+            this.songPart.stop();
+            this.songPart.dispose();
+            this.songPart = null;
+        }
         this.playbackState = 'stopped';
         this.currentNoteIndex = 0;
-        this.uiManager.drawSong(this.song, -1); // -1 for no highlight
+        this.uiManager.drawSong(this.song, -1);
         console.log("Playback stopped.");
+    }
+    
+    setTempo(rate) {
+        // This is the corrected logic for tempo control
+        Tone.Transport.bpm.value = this.baseBPM * rate;
+        console.log(`Tempo set to: ${Tone.Transport.bpm.value.toFixed(2)} BPM`);
     }
 
     handleNoteInput(midiNote, velocity) {
-        // Play audio feedback immediately
         const noteName = Tone.Midi(midiNote).toNote();
         this.sampler.triggerAttackRelease(noteName, "8n");
 
@@ -105,7 +117,6 @@ export class MusicEngine {
 
         const expectedNote = this.song[this.currentNoteIndex];
         const playedNoteName = this.midiToVexflow(midiNote);
-
         const expectedNoteName = expectedNote.keys[0].split('/')[0];
 
         if (playedNoteName.startsWith(expectedNoteName)) {
