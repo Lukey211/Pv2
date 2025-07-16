@@ -1,0 +1,10 @@
+[
+    {
+      "title": "Beginner: C-Major Scale",
+      "path": "assets/lessons/beginner-scale.json"
+    },
+    {
+      "title": "Beginner: C-Major Arpeggio",
+      "path": "assets/lessons/beginner-arpeggios.json"
+    }
+]

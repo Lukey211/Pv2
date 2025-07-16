@@ -1,0 +1,13 @@
+{
+    "title": "Beginner Scale Practice",
+    "notes": [
+        { "keys": ["c/4"], "duration": "q", "hand": "right" },
+        { "keys": ["c/3"], "duration": "q", "hand": "left" },
+        { "keys": ["d/4"], "duration": "q", "hand": "right" },
+        { "keys": ["d/3"], "duration": "q", "hand": "left" },
+        { "keys": ["e/4"], "duration": "q", "hand": "right" },
+        { "keys": ["e/3"], "duration": "q", "hand": "left" },
+        { "keys": ["f/4"], "duration": "q", "hand": "right" },
+        { "keys": ["f/3"], "duration": "q", "hand": "left" }
+    ]
+}

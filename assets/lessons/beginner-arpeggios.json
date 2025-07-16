@@ -1,0 +1,13 @@
+{
+    "title": "Beginner: C-Major Arpeggio",
+    "notes": [
+        { "keys": ["c/4"], "duration": "q", "hand": "right" },
+        { "keys": ["c/3"], "duration": "q", "hand": "left" },
+        { "keys": ["e/4"], "duration": "q", "hand": "right" },
+        { "keys": ["e/3"], "duration": "q", "hand": "left" },
+        { "keys": ["g/4"], "duration": "q", "hand": "right" },
+        { "keys": ["g/3"], "duration": "q", "hand": "left" },
+        { "keys": ["c/5"], "duration": "q", "hand": "right" },
+        { "keys": ["c/4"], "duration": "q", "hand": "left" }
+    ]
+}
