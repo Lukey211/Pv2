@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const playBtn = document.getElementById('play-pause-btn');
     const stopBtn = document.getElementById('stop-btn');
 
-    // --- Initialize Core Components ---
-    const uiManager = new UIManager();
-    const musicEngine = new MusicEngine(uiManager);
-
     // --- Define Sample Song ---
     const sampleSong = [
         { keys: ["c/4"], duration: "q" },
@@ -27,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { keys: ["c/5"], duration: "w" },
     ];
 
-    // --- Load Initial Song after Sampler is ready ---
-    // The MusicEngine constructor now takes a callback for when the sampler is loaded
-    musicEngine.sampler.onload = () => {
+    // --- Initialize Core Components ---
+    const uiManager = new UIManager();
+    const musicEngine = new MusicEngine(uiManager, () => {
         console.log("Sampler loaded, loading song...");
         musicEngine.loadSong(sampleSong);
-    };
+    });
 
     // --- MIDI Input Handler ---
     const onNotePlayed = (note, velocity) => {
