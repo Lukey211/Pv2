@@ -7,32 +7,44 @@ console.log("App started. Waiting for page to load.");
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM fully loaded and parsed.");
 
-    // Initialize all the core components
+    // --- Get DOM Elements ---
+    const playBtn = document.getElementById('play-pause-btn');
+    const stopBtn = document.getElementById('stop-btn');
+
+    // --- Initialize Core Components ---
     const uiManager = new UIManager();
     const musicEngine = new MusicEngine(uiManager);
 
-    // Define our sample song
+    // --- Define Song Data ---
     const sampleSong = [
-        { keys: ["c/4"], duration: "q" },
-        { keys: ["d/4"], duration: "q" },
-        { keys: ["e/4"], duration: "q" },
-        { keys: ["f/4"], duration: "q" },
-        { keys: ["g/4"], duration: "q" },
-        { keys: ["a/4"], duration: "q" },
-        { keys: ["b/4"], duration: "q" },
-        { keys: ["c/5"], duration: "w" },
+        { keys: ["c/4"], duration: "q" }, { keys: ["d/4"], duration: "q" },
+        { keys: ["e/4"], duration: "q" }, { keys: ["f/4"], duration: "q" },
+        { keys: ["g/4"], duration: "q" }, { keys: ["a/4"], duration: "q" },
+        { keys: ["b/4"], duration: "q" }, { keys: ["c/5"], duration: "w" },
     ];
-
-    // Load the song into the engine
     musicEngine.loadSong(sampleSong);
 
-    // The MIDI handler will call this function whenever a note is played
+    // --- MIDI Handling ---
     const onNotePlayed = (note, velocity) => {
+        // This is a good place to start the audio context if it's not running
+        if (Tone.context.state !== 'running') {
+            Tone.start();
+        }
         musicEngine.handleNoteInput(note, velocity);
     };
-
-    // Initialize MIDI and pass the callback function
     initializeMIDI(onNotePlayed);
 
-    // TODO: Set up UI event listeners (buttons, sliders)
+    // --- UI Event Listeners ---
+    playBtn.addEventListener('click', async () => {
+        // Audio must be started by a user gesture. This is the perfect place.
+        if (Tone.context.state !== 'running') {
+            await Tone.start();
+            console.log("AudioContext started!");
+        }
+        musicEngine.play();
+    });
+
+    stopBtn.addEventListener('click', () => {
+        musicEngine.stop();
+    });
 });
