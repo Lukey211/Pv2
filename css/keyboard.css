@@ -1,19 +1,21 @@
 #keyboard-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 10px;
     background-color: #333;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    overflow-x: auto;
     width: 100%;
     box-sizing: border-box;
+    min-height: 260px;
 }
 
 .keyboard {
-    display: flex;
+    display: block;
     position: relative;
+    width: 100%;
+    height: 220px;
 }
 
 .key {
@@ -21,37 +23,56 @@
     box-sizing: border-box;
     border-radius: 0 0 5px 5px;
     transition: background-color 0.1s ease;
+    position: absolute;
+    display: flex;
+    justify-content: center;
 }
 
 .key.white {
-    width: 50px;
-    height: 220px;
     background-color: #fff;
     z-index: 1;
+    height: 100%;
+    align-items: flex-end;
+    padding-bottom: 8px;
 }
 
 .key.black {
-    width: 30px;
-    height: 140px;
     background-color: #222;
-    position: absolute;
-    margin-left: -15px;
     z-index: 2;
+    height: 60%;
+    align-items: flex-start;
+    padding-top: 8px;
+}
+
+.key-name {
+    font-family: sans-serif;
+    pointer-events: none;
+}
+
+.key.white .key-name {
+    font-size: 14px;
+    color: #555;
+}
+
+.key.black .key-name {
+    font-size: 11px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.key.middle-c::after {
+    content: '';
+    position: absolute;
+    bottom: 35px;
+    width: 8px;
+    height: 8px;
+    background-color: #a0a0a0;
+    border-radius: 50%;
 }
 
 /* --- Color States --- */
-.key.blue {
-    background-color: #87ceeb; /* Sky Blue */
-}
-
-.key.green {
-    background-color: #90ee90; /* Light Green */
-}
-
-.key.red {
-    background-color: #f08080; /* Light Coral */
-}
-
-.key.orange {
-    background-color: #ffa500; /* Orange */
-}
+.key.blue { background-color: #87ceeb; }
+.key.green { background-color: #90ee90; }
+.key.red { background-color: #f08080; }
+.key.orange { background-color: #ffa500; }
