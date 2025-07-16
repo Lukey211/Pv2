@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to the Piano",
+  "lessons": [
+    {
+      "id": "lesson1",
+      "title": "Finding Middle C",
+      "description": "A simple exercise to find and play Middle C.",
+      "videoId": "videos/lesson1_video.mp4",
+      "midiFile": "midi/lesson1_exercise.mid"
+    },
+    {
+      "id": "lesson2",
+      "title": "Playing Your First Scale",
+      "description": "Learn the C Major scale with both hands.",
+      "videoId": "videos/lesson2_video.mp4",
+      "midiFile": "midi/lesson2_scale.mid"
+    }
+  ]
+}

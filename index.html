@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Piano Teacher</title>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow/build/vexflow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/midi.js@0.0.1/build/midi.min.js"></script>
+    <script src="../midi-js-soundfonts/MusyngKite/acoustic_grand_piano-mp3.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Web Piano Teacher</h1>
+
+    <div class="main-container">
+        <div id="video-container">
+            <video id="lesson-video" style="width:100%;"></video>
+        </div>
+        <div id="sheet-music-container"></div>
+    </div>
+
+    <div class="controls">
+        <button id="play-pause-btn">Play</button>
+        <button id="stop-btn">Stop</button>
+        <label>Tempo: <input type="range" id="tempo-slider" min="0.5" max="1.5" step="0.05" value="1"></label>
+        <button id="loop-btn">Toggle Loop</button>
+        <select id="hand-selector">
+            <option value="both">Both Hands</option>
+            <option value="right">Right Hand Only</option>
+            <option value="left">Left Hand Only</option>
+        </select>
+        <select id="midi-input-selector"></select>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

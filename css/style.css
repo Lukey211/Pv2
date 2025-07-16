@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+#video-container {
+    width: 100%;
+    background-color: #000;
+}
+
+#sheet-music-container {
+    width: 100%;
+    min-height: 250px;
+    background-color: #fff;
+    overflow-x: auto; /* Allow scrolling for long pieces */
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+}
