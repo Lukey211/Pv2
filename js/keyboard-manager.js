@@ -30,7 +30,7 @@ export class KeyboardManager {
                 nameSpan.textContent = noteName === 'C' ? detail.note : noteName;
                 keyEl.appendChild(nameSpan);
                 if (detail.note === 'C4') keyEl.classList.add('middle-c');
-            } else { // black
+            } else { 
                 keyEl.style.width = `${blackKeyWidth}%`;
                 keyEl.style.left = `${(whiteKeyPosition * whiteKeyWidth) - (blackKeyWidth / 2)}%`;
                 const names = this.getBlackKeyNames(noteName);
@@ -44,31 +44,37 @@ export class KeyboardManager {
 
         this.container.appendChild(keyboardDiv);
     }
-
-    highlightNextNote(noteName) {
-        this.clearAllHighlights('blue');
+    
+    setKeyState(noteName, state) {
         const key = this.keyMap.get(noteName);
-        if (key) key.classList.add('blue');
-    }
+        if (!key) return;
 
-    showCorrectPress(noteName) { this.flashKey(noteName, 'green'); }
-    showIncorrectPress(noteName) { this.flashKey(noteName, 'red'); }
+        // Clear previous actionable states (orange, green, red)
+        key.classList.remove('orange', 'green', 'red');
 
-    setUserPress(noteName, isDown) {
-        const key = this.keyMap.get(noteName);
-        if (key) isDown ? key.classList.add('orange') : key.classList.remove('orange');
+        switch (state) {
+            case 'correct':
+                key.classList.add('green');
+                break;
+            case 'incorrect':
+                key.classList.add('red');
+                // Use a timeout to remove the red flash, ensuring the key returns to neutral
+                setTimeout(() => key.classList.remove('red'), 300);
+                break;
+            case 'pressed':
+                key.classList.add('orange');
+                break;
+            case 'next':
+                key.classList.add('blue');
+                break;
+            case 'off':
+                // The initial remove handled this.
+                break;
+        }
     }
 
     clearAllHighlights(className) {
         this.keyMap.forEach(keyEl => keyEl.classList.remove(className));
-    }
-
-    flashKey(noteName, className) {
-        const key = this.keyMap.get(noteName);
-        if (key) {
-            key.classList.add(className);
-            setTimeout(() => key.classList.remove(className), 300);
-        }
     }
 
     getNoteDetails() {

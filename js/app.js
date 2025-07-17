@@ -3,60 +3,39 @@ import { MusicEngine } from './music-engine.js';
 import { UIManager } from './ui-manager.js';
 import { KeyboardManager } from './keyboard-manager.js';
 
-console.log("App started. Waiting for page to load.");
+let musicEngine;
+let allLessons = [];
 
-// --- Data Loading Functions ---
-async function loadLesson(lessonUrl, musicEngine) {
-    try {
-        const response = await fetch(lessonUrl);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const lessonData = await response.json();
-        console.log(`Lesson "${lessonData.title}" loaded successfully.`);
-        musicEngine.loadSong(lessonData.notes);
-    } catch (error) {
-        console.error("Could not load lesson:", error);
-    }
-}
-
-async function initializeLessons(lessonSelector, musicEngine) {
-    try {
-        const response = await fetch('assets/lessons.json');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const lessons = await response.json();
-
-        lessons.forEach(lesson => {
-            const option = document.createElement('option');
-            option.value = lesson.path;
-            option.textContent = lesson.title;
-            lessonSelector.appendChild(option);
-        });
-
-        // Load the first lesson by default
-        if (lessons.length > 0) {
-            await loadLesson(lessons[0].path, musicEngine);
+async function startExercise(lessonData) {
+    if (lessonData.type === 'song') {
+        try {
+            const response = await fetch(lessonData.path);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const songData = await response.json();
+            musicEngine.startExercise({ ...lessonData, notes: songData.notes });
+        } catch (error) {
+            console.error("Could not load song:", error);
         }
-    } catch (error) {
-        console.error("Could not initialize lessons:", error);
+    } else {
+        musicEngine.startExercise(lessonData);
     }
 }
 
-// --- Main Application Setup ---
-document.addEventListener('DOMContentLoaded', async () => {
+async function initializeApp() {
     console.log("DOM fully loaded and parsed.");
 
-    // Get DOM Elements
     const playBtn = document.getElementById('play-pause-btn');
     const stopBtn = document.getElementById('stop-btn');
     const tempoSlider = document.getElementById('tempo-slider');
     const handSelector = document.getElementById('hand-selector');
     const lessonSelector = document.getElementById('lesson-selector');
 
-    // Initialize Core Components
-    const uiManager = new UIManager();
-    const keyboardManager = new KeyboardManager();
-    const musicEngine = new MusicEngine(uiManager, keyboardManager);
+    const onNoteSelected = (noteIndex) => musicEngine.handleNoteSelection(noteIndex);
 
-    // Initialize MIDI
+    const uiManager = new UIManager(onNoteSelected);
+    const keyboardManager = new KeyboardManager();
+    musicEngine = new MusicEngine(uiManager, keyboardManager);
+
     const onNoteEvent = (note, isNoteOn) => {
         if (Tone.context.state !== 'running') Tone.start();
         musicEngine.handleUserKeyPress(note, isNoteOn);
@@ -64,26 +43,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     initializeMIDI(onNoteEvent);
 
-    // Load lessons and populate the dropdown
-    await initializeLessons(lessonSelector, musicEngine);
+    try {
+        const response = await fetch('assets/lessons.json');
+        if (!response.ok) throw new Error(`HTTP error!`);
+        allLessons = await response.json();
 
-    // --- UI Event Listeners ---
+        allLessons.forEach((lesson, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = lesson.title;
+            lessonSelector.appendChild(option);
+        });
+
+        if (allLessons.length > 0) await startExercise(allLessons[0]);
+
+    } catch (error) {
+        console.error("Could not initialize lessons:", error);
+    }
+
     playBtn.addEventListener('click', async () => {
         if (Tone.context.state !== 'running') await Tone.start();
         musicEngine.play();
     });
-
     stopBtn.addEventListener('click', () => musicEngine.stop());
-
-    tempoSlider.addEventListener('input', () => {
-        musicEngine.setTempo(parseFloat(tempoSlider.value));
+    tempoSlider.addEventListener('input', () => musicEngine.setTempo(parseFloat(tempoSlider.value)));
+    handSelector.addEventListener('change', () => musicEngine.setPracticeHand(handSelector.value));
+    lessonSelector.addEventListener('change', (e) => {
+        const selectedLesson = allLessons[e.target.value];
+        startExercise(selectedLesson);
     });
+}
 
-    handSelector.addEventListener('change', () => {
-        musicEngine.setPracticeHand(handSelector.value);
-    });
-
-    lessonSelector.addEventListener('change', () => {
-        loadLesson(lessonSelector.value, musicEngine);
-    });
-});
+document.addEventListener('DOMContentLoaded', initializeApp);

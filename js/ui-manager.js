@@ -1,80 +1,127 @@
-// This file will handle all updates to the DOM.
-
-const VF = Vex.Flow; // Define VF here, making it accessible to all methods
+const VF = Vex.Flow;
 
 export class UIManager {
-    constructor() {
+    constructor(onNoteClickCallback) {
         this.sheetMusicDiv = document.getElementById('sheet-music-container');
-        this.playhead = document.getElementById('playhead');
-        this.vexNotes = []; // Will store rendered notes to get their positions
+        this.viewerContainer = document.getElementById('viewer-container');
+        this.vexNotes = [];
+        this.onNoteClickCallback = onNoteClickCallback;
+        this.sheetMusicDiv.addEventListener('click', this._handleNoteClick.bind(this));
     }
 
-    drawSong(notes, highlightedNoteIndex) {
-        this.sheetMusicDiv.innerHTML = ''; // Clear previous content
-        this.sheetMusicDiv.appendChild(this.playhead); // Re-add playhead
+    _handleNoteClick(event) {
+        let target = event.target;
+        while (target && target !== this.sheetMusicDiv) {
+            if (target.id && target.id.startsWith('vf-note-')) {
+                // The fix is here: split('-')[2] gets the index number correctly.
+                const index = parseInt(target.id.split('-')[2]);
+                if (!isNaN(index) && this.onNoteClickCallback) {
+                    this.onNoteClickCallback(index);
+                }
+                return;
+            }
+            target = target.parentElement;
+        }
+    }
 
+    showCheckmarkFeedback(noteIndex) {
+        const note = this.vexNotes.find(n => n.noteIndex === noteIndex);
+        if (!note || !this.viewerContainer) return;
+        const noteX = note.getAbsoluteX() + this.sheetMusicDiv.offsetLeft - this.sheetMusicDiv.scrollLeft;
+        const noteY = note.getStave().getYForTopText() - 20;
+
+        const bubble = document.createElement('div');
+        bubble.classList.add('feedback-bubble');
+        bubble.innerHTML = '✓';
+        bubble.style.left = `${noteX}px`;
+        bubble.style.top = `${noteY}px`;
+        this.viewerContainer.appendChild(bubble);
+
+        setTimeout(() => {
+            bubble.style.opacity = '1';
+            bubble.style.transform = 'translateY(-20px)';
+        }, 10);
+        setTimeout(() => {
+            bubble.style.opacity = '0';
+            setTimeout(() => bubble.remove(), 400);
+        }, 500);
+    }
+
+    drawSong(notes, highlightedNoteIndex, loopState = {}) {
+        this.sheetMusicDiv.innerHTML = '';
         if (!notes || notes.length === 0) return;
 
-        // 1. Pre-calculate the total width needed
-        const formatter = new VF.Formatter();
-        // Create temporary voices just for width calculation
-        const tempTreble = new VF.Voice().setMode(VF.Voice.Mode.SOFT).addTickables(this._getVexNotes(notes, 'right'));
-        const tempBass = new VF.Voice().setMode(VF.Voice.Mode.SOFT).addTickables(this._getVexNotes(notes, 'left'));
-        
-        const minWidth = formatter.preCalculateMinTotalWidth([tempTreble, tempBass]);
-        const totalWidth = minWidth + 200; // Add padding
+        this.vexNotes = [];
+        const trebleVexNotes = this._getVexNotes(notes, 'right', highlightedNoteIndex, loopState);
+        const bassVexNotes = this._getVexNotes(notes, 'left', highlightedNoteIndex, loopState);
 
-        // 2. Create a single, wide renderer
+        if (trebleVexNotes.length === 0 && bassVexNotes.length === 0) return;
+
+        const totalBeats = this._getTotalBeats(notes);
+        const voiceConfig = { num_beats: totalBeats, beat_value: 4 };
+        const trebleVoice = new VF.Voice(voiceConfig).addTickables(trebleVexNotes);
+        const bassVoice = new VF.Voice(voiceConfig).addTickables(bassVexNotes);
+        
+        const minWidth = new VF.Formatter().joinVoices([trebleVoice, bassVoice]).preCalculateMinTotalWidth([trebleVoice, bassVoice]);
+        const totalWidth = minWidth + 200;
+
         const renderer = new VF.Renderer(this.sheetMusicDiv, VF.Renderer.Backends.SVG);
         renderer.resize(totalWidth, 250);
         const context = renderer.getContext();
         
-        // 3. Create single, wide staves
         const trebleStave = new VF.Stave(10, 40, totalWidth).addClef("treble").addTimeSignature("4/4").setContext(context).draw();
         const bassStave = new VF.Stave(10, 140, totalWidth).addClef("bass").addTimeSignature("4/4").setContext(context).draw();
         new VF.StaveConnector(trebleStave, bassStave).setType('brace').setContext(context).draw();
 
-        // 4. Get VexFlow notes, now with highlighting
-        this.vexNotes = [];
-        const trebleVexNotes = this._getVexNotes(notes, 'right', highlightedNoteIndex);
-        const bassVexNotes = this._getVexNotes(notes, 'left', highlightedNoteIndex);
+        const trebleBeams = VF.Beam.generateBeams(trebleVexNotes.filter(n => !n.isRest()));
+        const bassBeams = VF.Beam.generateBeams(bassVexNotes.filter(n => !n.isRest()));
 
-        // 5. Format and draw the voices
-        const voices = [
-            new VF.Voice().setMode(VF.Voice.Mode.SOFT).addTickables(trebleVexNotes),
-            new VF.Voice().setMode(VF.Voice.Mode.SOFT).addTickables(bassVexNotes)
-        ];
-        new VF.Formatter().joinVoices(voices).format(voices, minWidth);
-        voices.forEach(v => {
-            // Find the correct stave to draw on
-            const stave = v.getTickables()[0]?.clef === 'bass' ? bassStave : trebleStave;
-            v.draw(context, stave);
-        });
+        new VF.Formatter().joinVoices([trebleVoice, bassVoice]).format([trebleVoice, bassVoice], minWidth + 100);
         
-        console.log(`Scrolling score drawn, highlighting note ${highlightedNoteIndex}`);
+        trebleVoice.draw(context, trebleStave);
+        bassVoice.draw(context, bassStave);
+        
+        trebleBeams.forEach(b => b.setContext(context).draw());
+        bassBeams.forEach(b => b.setContext(context).draw());
     }
 
-    // Helper to generate VexFlow notes and rests
-    _getVexNotes(notes, hand, highlightedNoteIndex = -1) {
+    _getVexNotes(notes, hand, highlightedNoteIndex, loopState) {
         const vexNotes = [];
         notes.forEach((note, index) => {
-            const isHighlighted = index === highlightedNoteIndex;
-            const style = isHighlighted ? { fillStyle: 'green' } : undefined;
             const clef = hand === 'left' ? 'bass' : 'treble';
-
             if (note.hand === hand) {
                 const staveNote = new VF.StaveNote({ keys: note.keys, duration: note.duration, clef });
-                if (isHighlighted) staveNote.setStyle(style);
-                vexNotes.push(staveNote);
-                // Store a reference back to the original note index
+                staveNote.attrs.id = `note-${index}`; 
+                
+                if (loopState.enabled && index >= loopState.start && index <= loopState.end) {
+                    staveNote.setStyle({ fillStyle: '#D3D3D3', strokeStyle: '#D3D3D3' });
+                }
+                if (loopState.selectionMode !== 'inactive' && index === loopState.start) {
+                     staveNote.setStyle({ fillStyle: '#FBC02D', strokeStyle: '#FBC02D' });
+                }
+                if (index === highlightedNoteIndex) {
+                    staveNote.setStyle({ fillStyle: 'green', strokeStyle: 'green' });
+                }
+
                 staveNote.noteIndex = index;
-                this.vexNotes.push(staveNote); 
+                vexNotes.push(staveNote);
+                if (!staveNote.isRest()) this.vexNotes.push(staveNote);
             } else {
-                const key = hand === 'left' ? "d/3" : "b/4";
-                vexNotes.push(new VF.StaveNote({ keys: [key], duration: note.duration + 'r' }));
+                const restKey = hand === 'left' ? "d/3" : "b/4";
+                vexNotes.push(new VF.StaveNote({ keys: [restKey], duration: note.duration + 'r' }));
             }
         });
         return vexNotes;
+    }
+
+    _getTotalBeats(notes) {
+        const beatValues = { 'w': 4, 'h': 2, 'q': 1, '8': 0.5, '16': 0.25, '32': 0.125 };
+        return notes.reduce((total, note) => {
+            const duration = note.duration.replace('d', '');
+            let beatValue = beatValues[duration] || 0;
+            if (note.duration.includes('d')) beatValue *= 1.5;
+            return total + beatValue;
+        }, 0);
     }
 
     scrollToNote(noteIndex) {
@@ -82,13 +129,14 @@ export class UIManager {
             this.sheetMusicDiv.scrollLeft = 0;
             return;
         }
-
         const noteToScrollTo = this.vexNotes.find(n => n.noteIndex === noteIndex);
-        if (!noteToScrollTo || typeof noteToScrollTo.getAbsoluteX !== 'function') return;
-
-        const noteX = noteToScrollTo.getAbsoluteX();
-        const playheadOffset = this.sheetMusicDiv.clientWidth * 0.4;
-        
-        this.sheetMusicDiv.scrollLeft = noteX - playheadOffset;
+        if (!noteToScrollTo) return;
+        if (typeof noteToScrollTo.getAbsoluteX === 'function') {
+            const noteX = noteToScrollTo.getAbsoluteX();
+            if (this.sheetMusicDiv.parentElement) {
+                const playheadOffset = this.sheetMusicDiv.parentElement.clientWidth * 0.4;
+                this.sheetMusicDiv.scrollLeft = noteX - playheadOffset;
+            }
+        }
     }
 }

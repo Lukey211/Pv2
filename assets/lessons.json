@@ -1,14 +1,28 @@
 [
     {
-      "title": "Beginner: C-Major Scale",
+      "title": "Song: C-Major Scale",
+      "type": "song",
       "path": "assets/lessons/beginner-scale.json"
     },
     {
-      "title": "Beginner: C-Major Arpeggio",
+      "title": "Song: C-Major Arpeggio",
+      "type": "song",
       "path": "assets/lessons/beginner-arpeggios.json"
     },
     {
-      "title": "Intermediate: Interstellar Theme",
-      "path": "assets/lessons/Interstellar.json"
+      "title": "Flashcards: Treble Clef Notes",
+      "type": "flashcard",
+      "config": {
+        "clef": "treble",
+        "range": ["c/4", "g/5"]
+      }
+    },
+    {
+      "title": "Flashcards: Bass Clef Notes",
+      "type": "flashcard",
+      "config": {
+        "clef": "bass",
+        "range": ["f/2", "c/4"]
+      }
     }
 ]

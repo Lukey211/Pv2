@@ -7,6 +7,15 @@ export class MusicEngine {
         this.playbackState = 'stopped';
         this.songPart = null;
         this.practiceHand = 'both';
+        this.heldChordNotes = new Set();
+        this.currentMode = 'song';
+        this.exerciseConfig = null;
+        this.loop = {
+            enabled: false,
+            selectionMode: 'inactive',
+            start: null,
+            end: null
+        };
 
         this.baseBPM = 120;
         Tone.Transport.bpm.value = this.baseBPM;
@@ -17,137 +26,252 @@ export class MusicEngine {
         }).toDestination();
     }
 
-    durationToTone(duration) {
-        const map = { 'w': '1n', 'h': '2n', 'q': '4n', '8': '8n', '16': '16n', '32': '32n' };
-        return duration.includes('d') ? map[duration.replace('d', '')] + '.' : map[duration] || '4n';
+    startExercise(exerciseData) {
+        this.currentMode = exerciseData.type;
+        this.exerciseConfig = exerciseData.config;
+        console.log(`Starting new exercise. Mode: ${this.currentMode}`);
+        this.stop();
+
+        if (this.currentMode === 'song') {
+            this.loadSong(exerciseData.notes);
+        } else if (this.currentMode === 'flashcard') {
+            this._generateFlashcard();
+        }
     }
 
-    loadSong(song) {
+    _generateFlashcard() {
+        this.stop();
+        const { clef, range } = this.exerciseConfig;
+        
+        const minMidi = Tone.Midi(this.vexflowToTone(range[0])).toMidi();
+        const maxMidi = Tone.Midi(this.vexflowToTone(range[1])).toMidi();
+        const randomMidi = Math.floor(Math.random() * (maxMidi - minMidi + 1)) + minMidi;
+        
+        const vexKey = this.midiToVexflow(randomMidi);
+        const hand = clef === 'bass' ? 'left' : 'right';
+
+        const flashcardNote = [{ keys: [vexKey], duration: 'w', hand: hand }];
+        this.loadSong(flashcardNote, false);
+    }
+
+    loadSong(song, resetMode = true) {
+        if (resetMode) this.currentMode = 'song';
         this.stop();
         this.song = song;
         this.currentNoteIndex = 0;
-        this.uiManager.drawSong(this.song, 0); // Highlight first note
-        this.uiManager.scrollToNote(0); // Scroll to first note
+        this.uiManager.drawSong(this.song, 0, this.loop); 
+        this.uiManager.scrollToNote(0); 
         this.playbackState = 'waiting';
         this.updateKeyboardForNextNote();
-        console.log("Song loaded.");
     }
 
     play() {
-        if (!this.song || this.playbackState === 'playing') return;
+        if (this.currentMode !== 'song' || !this.song || this.playbackState === 'playing') return;
         this.stop();
         this.playbackState = 'playing';
         this.keyboardManager.clearAllHighlights('blue');
-
+        
+        const notesToPlay = (this.practiceHand === 'both') ? this.song : this.song.filter(note => note.hand === this.practiceHand);
+        
         let cumulativeTime = 0;
-        const partEvents = this.song.map((note, index) => {
+        const partEvents = notesToPlay.map(note => {
             const durationInSeconds = Tone.Time(this.durationToTone(note.duration)).toSeconds();
-            const event = { time: cumulativeTime, note, index, duration: durationInSeconds };
+            const event = { time: cumulativeTime, note, duration: durationInSeconds, originalIndex: this.song.indexOf(note) };
             cumulativeTime += durationInSeconds;
             return event;
         });
 
         this.songPart = new Tone.Part((time, value) => {
-            if (this.practiceHand === 'both' || value.note.hand === this.practiceHand) {
-                const notesInChord = value.note.keys.map(key => this.vexflowToTone(key));
-                this.sampler.triggerAttackRelease(notesInChord, value.duration, time);
-            }
+            const notesInChord = value.note.keys.map(key => this.vexflowToTone(key));
+            this.sampler.triggerAttackRelease(notesInChord, value.duration, time);
+            
             Tone.Draw.schedule(() => {
-                this.uiManager.drawSong(this.song, value.index);
-                this.uiManager.scrollToNote(value.index);
+                this.uiManager.drawSong(this.song, value.originalIndex, this.loop);
+                this.uiManager.scrollToNote(value.originalIndex);
+                this.updateKeyboardForNextNote(value.originalIndex + 1);
             }, time);
-        }, partEvents).start(0);
+        }, partEvents);
 
+        if (this.loop.enabled) {
+            this.songPart.loop = true;
+            const loopStartEvent = partEvents.find(e => e.originalIndex === this.loop.start);
+            const loopEndEvent = partEvents.find(e => e.originalIndex === this.loop.end);
+            if (loopStartEvent && loopEndEvent) {
+                this.songPart.loopStart = loopStartEvent.time;
+                this.songPart.loopEnd = loopEndEvent.time + loopEndEvent.duration;
+                this.songPart.start(0, this.songPart.loopStart);
+            }
+        } else {
+            this.songPart.loop = false;
+            this.songPart.start(0);
+            Tone.Transport.scheduleOnce(() => this.stop(), cumulativeTime);
+        }
+        
         Tone.Transport.start();
-        Tone.Transport.scheduleOnce(() => this.stop(), cumulativeTime);
-        console.log("Playback started.");
     }
 
     stop() {
         Tone.Transport.stop();
         if (this.songPart) { this.songPart.stop(0); this.songPart.dispose(); this.songPart = null; }
         this.playbackState = 'stopped';
-        this.currentNoteIndex = 0;
-        this.uiManager.drawSong(this.song, -1);
-        this.uiManager.scrollToNote(0);
-        this.keyboardManager.clearAllHighlights('blue');
-        console.log("Playback stopped.");
+        if (this.currentMode === 'song') {
+            this.currentNoteIndex = this.loop.enabled ? this.loop.start : 0;
+        } else {
+            this.currentNoteIndex = 0;
+        }
+        if (this.song) {
+            this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
+            this.uiManager.scrollToNote(this.currentNoteIndex);
+            this.updateKeyboardForNextNote();
+        }
     }
     
-    setTempo(rate) {
-        Tone.Transport.bpm.value = this.baseBPM * rate;
-    }
-
+    setTempo(rate) { Tone.Transport.bpm.value = this.baseBPM * rate; }
+    
     setPracticeHand(hand) {
         this.practiceHand = hand;
-        this.loadSong(this.song); // Reload song to apply hand selection
+        this.startExercise({ type: 'song', notes: this.song });
+    }
+
+    toggleLoop() {
+        if (this.loop.enabled || this.loop.selectionMode !== 'inactive') {
+            this.loop.enabled = false;
+            this.loop.start = null;
+            this.loop.end = null;
+            this.loop.selectionMode = 'inactive';
+        } else {
+            this.loop.selectionMode = 'selecting_start';
+        }
+        this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
+        return this.loop.enabled || this.loop.selectionMode !== 'inactive';
+    }
+
+    handleNoteSelection(index) {
+        if (this.loop.selectionMode === 'inactive') return;
+        if (this.loop.start === null) {
+            this.loop.start = index;
+            this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
+        } else {
+            this.loop.end = (index < this.loop.start) ? this.loop.start : index;
+            this.loop.start = (index < this.loop.start) ? index : this.loop.start;
+            this.loop.enabled = true;
+            this.loop.selectionMode = 'inactive';
+            this.currentNoteIndex = this.loop.start;
+            this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
+            this.uiManager.scrollToNote(this.currentNoteIndex);
+            this.updateKeyboardForNextNote();
+        }
     }
 
     handleUserKeyPress(midiNote, isNoteOn) {
         const noteName = Tone.Midi(midiNote).toNote();
-        this.keyboardManager.setUserPress(noteName, isNoteOn);
-        if (isNoteOn) this.sampler.triggerAttackRelease(noteName, "8n");
+        
+        if (isNoteOn) {
+            this.sampler.triggerAttack(noteName);
+
+            // Determine the visual state of the key press
+            const expectedNote = this.song ? this.song[this.currentNoteIndex] : null;
+            let keyState = 'pressed'; // Default to orange for any press
+            
+            if (expectedNote && (this.practiceHand === 'both' || expectedNote.hand === this.practiceHand)) {
+                const expectedKeys = expectedNote.keys.map(k => this.vexflowToTone(k));
+                if (expectedKeys.includes(noteName)) {
+                    keyState = 'correct'; // If it's an expected note, make it green
+                }
+            }
+            this.keyboardManager.setKeyState(noteName, keyState);
+        } else { // Note Off
+            this.sampler.triggerRelease(noteName);
+            this.keyboardManager.setKeyState(noteName, 'off'); // Turn off highlight
+            
+            // For chord logic, remove the note from our "held" set
+            const noteNameOnly = this.midiToVexflow(midiNote).split('/')[0];
+            this.heldChordNotes.delete(noteNameOnly);
+        }
     }
 
     handleNoteInput(midiNote) {
-        if (this.playbackState !== 'waiting' || !this.song) return;
+        if (this.playbackState !== 'waiting' || !this.song || !this.song[this.currentNoteIndex]) return;
+        
         const expectedNote = this.song[this.currentNoteIndex];
-        if (!expectedNote) return;
-
         if (this.practiceHand !== 'both' && expectedNote.hand !== this.practiceHand) {
             this.playOtherHandNote(expectedNote);
             return;
         }
 
-        const playedNoteName = this.midiToVexflow(midiNote);
+        const playedNoteName = this.midiToVexflow(midiNote).split('/')[0];
         const expectedNoteNames = expectedNote.keys.map(k => k.split('/')[0]);
-        const toneNoteName = Tone.Midi(midiNote).toNote();
-
-        if (expectedNoteNames.includes(playedNoteName.split('/')[0])) {
-            this.keyboardManager.showCorrectPress(toneNoteName);
-            this.advanceToNextNote();
+        
+        if (expectedNoteNames.includes(playedNoteName)) {
+            this.uiManager.showCheckmarkFeedback(this.currentNoteIndex);
+            
+            if (this.currentMode === 'flashcard') {
+                setTimeout(() => this._generateFlashcard(), 600);
+            } else {
+                const isChord = expectedNote.keys.length > 1;
+                if (isChord) {
+                    this.heldChordNotes.add(playedNoteName);
+                    if (expectedNoteNames.every(name => this.heldChordNotes.has(name))) {
+                        this.advanceToNextNote();
+                    }
+                } else {
+                    this.advanceToNextNote();
+                }
+            }
         } else {
-            this.keyboardManager.setUserPress(toneNoteName, false);
-            this.keyboardManager.showIncorrectPress(toneNoteName);
+            // Flash the key red for an incorrect note
+            this.keyboardManager.setKeyState(Tone.Midi(midiNote).toNote(), 'incorrect');
         }
     }
     
     playOtherHandNote(note) {
         const chordNotes = note.keys.map(key => this.vexflowToTone(key));
-        const duration = this.durationToTone(note.duration);
-        this.sampler.triggerAttackRelease(chordNotes, duration);
-        chordNotes.forEach(n => this.keyboardManager.showCorrectPress(n));
+        this.sampler.triggerAttackRelease(chordNotes, this.durationToTone(note.duration));
+        chordNotes.forEach(n => this.keyboardManager.setKeyState(n, 'correct'));
+        setTimeout(() => chordNotes.forEach(n => this.keyboardManager.setKeyState(n, 'off')), 200);
         this.advanceToNextNote();
     }
 
     advanceToNextNote() {
+        this.heldChordNotes.clear();
         this.currentNoteIndex++;
-        if (this.currentNoteIndex >= this.song.length) {
+        if (this.loop.enabled && this.currentNoteIndex > this.loop.end) {
+            this.currentNoteIndex = this.loop.start;
+        }
+        if (!this.loop.enabled && this.currentNoteIndex >= this.song.length) {
             this.stop();
             console.log("Song finished!");
             return;
         }
-        this.uiManager.drawSong(this.song, this.currentNoteIndex);
+        this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
         this.uiManager.scrollToNote(this.currentNoteIndex);
         this.updateKeyboardForNextNote();
-
+        
         const nextNote = this.song[this.currentNoteIndex];
-        if (this.practiceHand !== 'both' && nextNote.hand !== this.practiceHand) {
+        if (this.practiceHand !== 'both' && nextNote && nextNote.hand !== this.practiceHand) {
             setTimeout(() => this.playOtherHandNote(nextNote), 200);
         }
     }
 
-    updateKeyboardForNextNote() {
-        if(this.song && this.song[this.currentNoteIndex]) {
-            const nextNote = this.song[this.currentNoteIndex];
-            if(this.practiceHand === 'both' || nextNote.hand === this.practiceHand) {
-                const nextNoteNames = nextNote.keys.map(key => this.vexflowToTone(key));
-                this.keyboardManager.clearAllHighlights('blue');
-                nextNoteNames.forEach(noteName => this.keyboardManager.highlightNextNote(noteName));
-            }
+    updateKeyboardForNextNote(index = this.currentNoteIndex) {
+        this.keyboardManager.clearAllHighlights('blue');
+        if (!this.song || !this.song[index]) return;
+        const nextNote = this.song[index];
+        if (this.practiceHand === 'both' || (nextNote && nextNote.hand === this.practiceHand)) {
+            const nextNoteNames = nextNote.keys.map(key => this.vexflowToTone(key));
+            nextNoteNames.forEach(noteName => this.keyboardManager.setKeyState(noteName, 'next'));
         }
     }
 
-    midiToVexflow(midiNote) { return Tone.Midi(midiNote).toNote().replace(/(\w)(\d)/, '$1/$2').toLowerCase(); }
+    durationToTone(duration) {
+        const map = { 'w': '1n', 'h': '2n', 'q': '4n', '8': '8n', '16': '16n', '32': '32n' };
+        return duration.includes('d') ? map[duration.replace('d', '')] + '.' : map[duration] || '4n';
+    }
+
+    midiToVexflow(midiNote) {
+        const note = Tone.Midi(midiNote).toNote();
+        return note.replace(/([a-zA-Z]#?)(\d)/, '$1/$2').toLowerCase();
+    }
+    
     vexflowToTone(vfNote) { return vfNote.replace('/', '').toUpperCase(); }
 }
