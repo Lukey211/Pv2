@@ -16,16 +16,23 @@ body {
     border: 1px solid #ccc;
 }
 
-#video-container {
-    width: 100%;
-    background-color: #000;
+#sheet-music-container {
+    position: relative; /* Needed for the playhead */
+    height: 250px; /* A fixed height for the viewport */
+    background-color: #fff;
+    overflow-x: hidden; /* Hide the long 'film strip' of music */
+    overflow-y: hidden;
+    scroll-behavior: smooth; /* Animate the scrolling */
 }
 
-#sheet-music-container {
-    width: 100%;
-    min-height: 250px;
-    background-color: #fff;
-    overflow-x: auto; /* Allow scrolling for long pieces */
+#playhead {
+    position: absolute;
+    left: 40%; /* Position the playhead 40% from the left */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e53935; /* A clear red color */
+    z-index: 100; /* Ensure it's on top */
 }
 
 .controls {

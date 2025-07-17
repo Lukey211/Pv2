@@ -6,5 +6,9 @@
     {
       "title": "Beginner: C-Major Arpeggio",
       "path": "assets/lessons/beginner-arpeggios.json"
+    },
+    {
+      "title": "Intermediate: Interstellar Theme",
+      "path": "assets/lessons/Interstellar.json"
     }
 ]

@@ -6,7 +6,7 @@ export class MusicEngine {
         this.currentNoteIndex = 0;
         this.playbackState = 'stopped';
         this.songPart = null;
-        this.practiceHand = 'both'; // 'both', 'left', 'right'
+        this.practiceHand = 'both';
 
         this.baseBPM = 120;
         Tone.Transport.bpm.value = this.baseBPM;
@@ -23,9 +23,11 @@ export class MusicEngine {
     }
 
     loadSong(song) {
+        this.stop();
         this.song = song;
         this.currentNoteIndex = 0;
-        this.uiManager.drawSong(this.song, this.currentNoteIndex);
+        this.uiManager.drawSong(this.song, 0); // Highlight first note
+        this.uiManager.scrollToNote(0); // Scroll to first note
         this.playbackState = 'waiting';
         this.updateKeyboardForNextNote();
         console.log("Song loaded.");
@@ -37,21 +39,23 @@ export class MusicEngine {
         this.playbackState = 'playing';
         this.keyboardManager.clearAllHighlights('blue');
 
-        const notesToPlay = (this.practiceHand === 'both') ? this.song : this.song.filter(note => note.hand === this.practiceHand);
-
         let cumulativeTime = 0;
-        const partEvents = notesToPlay.map(note => {
+        const partEvents = this.song.map((note, index) => {
             const durationInSeconds = Tone.Time(this.durationToTone(note.duration)).toSeconds();
-            const event = { time: cumulativeTime, note, duration: durationInSeconds };
+            const event = { time: cumulativeTime, note, index, duration: durationInSeconds };
             cumulativeTime += durationInSeconds;
             return event;
         });
 
         this.songPart = new Tone.Part((time, value) => {
-            const noteName = this.vexflowToTone(value.note.keys[0]);
-            this.sampler.triggerAttackRelease(noteName, value.duration, time);
-            const originalIndex = this.song.indexOf(value.note);
-            Tone.Draw.schedule(() => this.uiManager.drawSong(this.song, originalIndex), time);
+            if (this.practiceHand === 'both' || value.note.hand === this.practiceHand) {
+                const notesInChord = value.note.keys.map(key => this.vexflowToTone(key));
+                this.sampler.triggerAttackRelease(notesInChord, value.duration, time);
+            }
+            Tone.Draw.schedule(() => {
+                this.uiManager.drawSong(this.song, value.index);
+                this.uiManager.scrollToNote(value.index);
+            }, time);
         }, partEvents).start(0);
 
         Tone.Transport.start();
@@ -65,21 +69,18 @@ export class MusicEngine {
         this.playbackState = 'stopped';
         this.currentNoteIndex = 0;
         this.uiManager.drawSong(this.song, -1);
+        this.uiManager.scrollToNote(0);
         this.keyboardManager.clearAllHighlights('blue');
         console.log("Playback stopped.");
     }
     
     setTempo(rate) {
         Tone.Transport.bpm.value = this.baseBPM * rate;
-        console.log(`Tempo set to: ${Tone.Transport.bpm.value.toFixed(2)} BPM`);
     }
 
     setPracticeHand(hand) {
         this.practiceHand = hand;
-        console.log(`Practice hand set to: ${hand}`);
-        // Reset the song to the beginning
-        this.stop();
-        this.loadSong(this.song);
+        this.loadSong(this.song); // Reload song to apply hand selection
     }
 
     handleUserKeyPress(midiNote, isNoteOn) {
@@ -90,46 +91,44 @@ export class MusicEngine {
 
     handleNoteInput(midiNote) {
         if (this.playbackState !== 'waiting' || !this.song) return;
-
         const expectedNote = this.song[this.currentNoteIndex];
         if (!expectedNote) return;
 
-        const playedNoteName = this.midiToVexflow(midiNote);
-        const expectedNoteName = expectedNote.keys[0].split('/')[0];
-        const toneNoteName = Tone.Midi(midiNote).toNote();
-
-        // If the expected note is for the "other" hand, play it and advance
         if (this.practiceHand !== 'both' && expectedNote.hand !== this.practiceHand) {
             this.playOtherHandNote(expectedNote);
             return;
         }
 
-        if (playedNoteName.startsWith(expectedNoteName)) {
+        const playedNoteName = this.midiToVexflow(midiNote);
+        const expectedNoteNames = expectedNote.keys.map(k => k.split('/')[0]);
+        const toneNoteName = Tone.Midi(midiNote).toNote();
+
+        if (expectedNoteNames.includes(playedNoteName.split('/')[0])) {
             this.keyboardManager.showCorrectPress(toneNoteName);
             this.advanceToNextNote();
         } else {
-            // Bug Fix: Turn off orange before flashing red
             this.keyboardManager.setUserPress(toneNoteName, false);
             this.keyboardManager.showIncorrectPress(toneNoteName);
         }
     }
     
     playOtherHandNote(note) {
-        const noteName = this.vexflowToTone(note.keys[0]);
+        const chordNotes = note.keys.map(key => this.vexflowToTone(key));
         const duration = this.durationToTone(note.duration);
-        this.sampler.triggerAttackRelease(noteName, duration);
-        this.keyboardManager.showCorrectPress(noteName);
+        this.sampler.triggerAttackRelease(chordNotes, duration);
+        chordNotes.forEach(n => this.keyboardManager.showCorrectPress(n));
         this.advanceToNextNote();
     }
 
     advanceToNextNote() {
         this.currentNoteIndex++;
         if (this.currentNoteIndex >= this.song.length) {
-            console.log("Song finished!");
             this.stop();
+            console.log("Song finished!");
             return;
         }
         this.uiManager.drawSong(this.song, this.currentNoteIndex);
+        this.uiManager.scrollToNote(this.currentNoteIndex);
         this.updateKeyboardForNextNote();
 
         const nextNote = this.song[this.currentNoteIndex];
@@ -142,8 +141,9 @@ export class MusicEngine {
         if(this.song && this.song[this.currentNoteIndex]) {
             const nextNote = this.song[this.currentNoteIndex];
             if(this.practiceHand === 'both' || nextNote.hand === this.practiceHand) {
-                const nextNoteName = this.vexflowToTone(nextNote.keys[0]);
-                this.keyboardManager.highlightNextNote(nextNoteName);
+                const nextNoteNames = nextNote.keys.map(key => this.vexflowToTone(key));
+                this.keyboardManager.clearAllHighlights('blue');
+                nextNoteNames.forEach(noteName => this.keyboardManager.highlightNextNote(noteName));
             }
         }
     }
