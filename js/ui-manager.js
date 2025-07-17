@@ -4,17 +4,24 @@ export class UIManager {
     constructor(onNoteClickCallback) {
         this.sheetMusicDiv = document.getElementById('sheet-music-container');
         this.viewerContainer = document.getElementById('viewer-container');
+        this.pageTitle = document.querySelector('h1'); // Get the h1 element
         this.vexNotes = [];
         this.onNoteClickCallback = onNoteClickCallback;
         this.sheetMusicDiv.addEventListener('click', this._handleNoteClick.bind(this));
+    }
+
+    // New method to update the main title
+    updateTitle(title) {
+        if (this.pageTitle) {
+            this.pageTitle.textContent = title;
+        }
     }
 
     _handleNoteClick(event) {
         let target = event.target;
         while (target && target !== this.sheetMusicDiv) {
             if (target.id && target.id.startsWith('vf-note-')) {
-                // The fix is here: split('-')[2] gets the index number correctly.
-                const index = parseInt(target.id.split('-')[2]);
+                const index = parseInt(target.id.split('-')[1]);
                 if (!isNaN(index) && this.onNoteClickCallback) {
                     this.onNoteClickCallback(index);
                 }
@@ -58,6 +65,8 @@ export class UIManager {
         if (trebleVexNotes.length === 0 && bassVexNotes.length === 0) return;
 
         const totalBeats = this._getTotalBeats(notes);
+        if (totalBeats === 0) return; // Avoid errors on empty voices
+
         const voiceConfig = { num_beats: totalBeats, beat_value: 4 };
         const trebleVoice = new VF.Voice(voiceConfig).addTickables(trebleVexNotes);
         const bassVoice = new VF.Voice(voiceConfig).addTickables(bassVexNotes);
@@ -102,7 +111,6 @@ export class UIManager {
                 if (index === highlightedNoteIndex) {
                     staveNote.setStyle({ fillStyle: 'green', strokeStyle: 'green' });
                 }
-
                 staveNote.noteIndex = index;
                 vexNotes.push(staveNote);
                 if (!staveNote.isRest()) this.vexNotes.push(staveNote);

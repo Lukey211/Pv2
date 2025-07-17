@@ -29,59 +29,58 @@ export class MusicEngine {
     startExercise(exerciseData) {
         this.currentMode = exerciseData.type;
         this.exerciseConfig = exerciseData.config;
-        console.log(`Starting new exercise. Mode: ${this.currentMode}`);
         this.stop();
 
         if (this.currentMode === 'song') {
+            this.uiManager.updateTitle(exerciseData.title);
             this.loadSong(exerciseData.notes);
         } else if (this.currentMode === 'flashcard') {
             this._generateFlashcard();
         } else if (this.currentMode === 'arpeggio') {
-            const notes = this._generateArpeggioExercise(this.exerciseConfig);
-            this.loadSong(notes, false);
+            this._generateArpeggioExercise();
         }
     }
 
-    _generateArpeggioExercise(config) {
-        const formulas = {
-            major: [0, 4, 7], // Intervals in semitones
-            minor: [0, 3, 7]
-        };
-        const rootMidi = Tone.Midi(config.root).toMidi();
-        const formula = formulas[config.quality] || formulas.major;
+    _generateArpeggioExercise() {
+        const possibleRoots = ['C4', 'G3', 'D4', 'A3', 'E4', 'F3'];
+        const possibleQualities = ['major', 'minor'];
+        
+        const root = possibleRoots[Math.floor(Math.random() * possibleRoots.length)];
+        const quality = possibleQualities[Math.floor(Math.random() * possibleQualities.length)];
+        const octaves = 2;
+
+        this.uiManager.updateTitle(`Practice: ${root.slice(0,-1)} ${quality} Arpeggio`);
+
+        const formulas = { major: [0, 4, 7], minor: [0, 3, 7] };
+        const rootMidi = Tone.Midi(root).toMidi();
+        const formula = formulas[quality];
         const arpeggioMidiSequence = [];
-        const splitPoint = 60; // C4
-
-        // Ascending
-        for (let i = 0; i < config.octaves; i++) {
-            formula.forEach(interval => {
-                arpeggioMidiSequence.push(rootMidi + interval + (i * 12));
-            });
+        
+        for (let i = 0; i < octaves; i++) {
+            formula.forEach(interval => arpeggioMidiSequence.push(rootMidi + interval + (i * 12)));
         }
-        // Add top octave root note
-        arpeggioMidiSequence.push(rootMidi + (config.octaves * 12));
-
-        // Descending
-        for (let i = config.octaves - 1; i >= 0; i--) {
+        arpeggioMidiSequence.push(rootMidi + (octaves * 12));
+        for (let i = octaves - 1; i >= 0; i--) {
             for (let j = formula.length - 1; j >= 0; j--) {
                 const note = rootMidi + formula[j] + (i * 12);
-                // Avoid duplicating the top and bottom notes on the way down
                 if (note !== arpeggioMidiSequence[arpeggioMidiSequence.length - 1]) {
                      arpeggioMidiSequence.push(note);
                 }
             }
         }
         
-        // Convert MIDI numbers to our lesson format
-        return arpeggioMidiSequence.map(midiNote => ({
+        const notes = arpeggioMidiSequence.map(midiNote => ({
             keys: [this.midiToVexflow(midiNote)],
-            duration: 'q', // Arpeggios are typically played with an even rhythm
-            hand: midiNote < splitPoint ? 'left' : 'right'
+            duration: 'q',
+            hand: midiNote < 60 ? 'left' : 'right'
         }));
+
+        this.loadSong(notes, false);
     }
 
     _generateFlashcard() {
         this.stop();
+        this.uiManager.updateTitle("Flashcards: Identify the Note");
         const { clef, range } = this.exerciseConfig;
         const minMidi = Tone.Midi(this.vexflowToTone(range[0])).toMidi();
         const maxMidi = Tone.Midi(this.vexflowToTone(range[1])).toMidi();
@@ -158,7 +157,6 @@ export class MusicEngine {
         } else {
             this.currentNoteIndex = 0;
         }
-
         if (this.song) {
             this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
             this.uiManager.scrollToNote(this.currentNoteIndex);
@@ -226,19 +224,15 @@ export class MusicEngine {
 
     handleNoteInput(midiNote) {
         if (this.playbackState !== 'waiting' || !this.song || !this.song[this.currentNoteIndex]) return;
-        
         const expectedNote = this.song[this.currentNoteIndex];
         if (this.practiceHand !== 'both' && expectedNote.hand !== this.practiceHand) {
             this.playOtherHandNote(expectedNote);
             return;
         }
-
         const playedNoteName = this.midiToVexflow(midiNote).split('/')[0];
         const expectedNoteNames = expectedNote.keys.map(k => k.split('/')[0]);
-        
         if (expectedNoteNames.includes(playedNoteName)) {
             this.uiManager.showCheckmarkFeedback(this.currentNoteIndex);
-            
             if (this.currentMode === 'flashcard') {
                 setTimeout(() => this._generateFlashcard(), 600);
             } else {
@@ -279,7 +273,6 @@ export class MusicEngine {
         this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
         this.uiManager.scrollToNote(this.currentNoteIndex);
         this.updateKeyboardForNextNote();
-        
         const nextNote = this.song[this.currentNoteIndex];
         if (this.practiceHand !== 'both' && nextNote && nextNote.hand !== this.practiceHand) {
             setTimeout(() => this.playOtherHandNote(nextNote), 200);
@@ -289,7 +282,6 @@ export class MusicEngine {
     updateKeyboardForNextNote(index = this.currentNoteIndex) {
         this.keyboardManager.clearAllHighlights('blue');
         if (!this.song || !this.song[index]) return;
-        
         const nextNote = this.song[index];
         if (this.practiceHand === 'both' || (nextNote && nextNote.hand === this.practiceHand)) {
             const nextNoteNames = nextNote.keys.map(key => this.vexflowToTone(key));
