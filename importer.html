@@ -4,21 +4,39 @@
     <meta charset="UTF-8">
     <title>MIDI to Lesson JSON Converter</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
-        h1 { color: #333; }
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; line-height: 1.6; }
+        h1, h2 { color: #333; }
         #container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        textarea { width: 100%; height: 500px; margin-top: 15px; font-family: monospace; font-size: 14px; border: 1px solid #ccc; }
-        label { font-weight: bold; font-size: 1.1em; }
+        input[type="text"], input[type="file"] { display: block; width: 98%; padding: 8px; margin-bottom: 20px; font-size: 1em; }
+        textarea { width: 100%; box-sizing: border-box; height: 400px; margin-top: 5px; font-family: monospace; font-size: 14px; border: 1px solid #ccc; }
+        pre { background-color: #eee; padding: 10px; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }
+        button { background-color: #007bff; color: white; border: none; padding: 8px 12px; font-size: 0.9em; border-radius: 4px; cursor: pointer; margin-left: 10px; }
+        button:hover { background-color: #0056b3; }
+        .output-section { margin-top: 20px; }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.28/build/Midi.min.js"></script>
 </head>
 <body>
     <div id="container">
-        <h1>MIDI to Lesson JSON Converter</h1>
-        <p>Upload a MIDI file to convert it into the JSON format used by the Web Piano Teacher application.</p>
-        <label for="midi-file-input">Choose a .mid file:</label>
+        <h1>Lesson Authoring Tool</h1>
+        <p>Upload a MIDI file and provide a title to generate the necessary JSON for the piano teacher application.</p>
+        
+        <label for="lesson-title">1. Enter Lesson Title:</label>
+        <input type="text" id="lesson-title" placeholder="e.g., Intermediate: Moonlight Sonata Mvt. 1">
+
+        <label for="midi-file-input">2. Upload a .mid file:</label>
         <input type="file" id="midi-file-input" accept=".mid, .midi">
-        <textarea id="json-output" readonly placeholder="JSON output will appear here..."></textarea>
+        
+        <div id="output-container" style="display:none;">
+            <div class="output-section">
+                <h2>3. Save Lesson File <button id="download-btn" style="display:none;">Download JSON</button></h2>
+                <textarea id="json-output" readonly placeholder="JSON output will appear here..."></textarea>
+            </div>
+            <div class="output-section">
+                <h2>4. Update Manifest File <button id="copy-manifest-btn" style="display:none;">Copy Entry</button></h2>
+                <pre id="manifest-output"></pre>
+            </div>
+        </div>
     </div>
 
     <script src="js/importer.js"></script>

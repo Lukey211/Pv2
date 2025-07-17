@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const titleInput = document.getElementById('lesson-title');
     const fileInput = document.getElementById('midi-file-input');
-    const outputTextarea = document.getElementById('json-output');
+    const outputContainer = document.getElementById('output-container');
+    const jsonOutputTextarea = document.getElementById('json-output');
+    const downloadBtn = document.getElementById('download-btn');
+    const manifestOutputPre = document.getElementById('manifest-output');
+    const copyManifestBtn = document.getElementById('copy-manifest-btn');
+    let generatedFilename = 'lesson.json';
 
     fileInput.addEventListener('change', handleFileSelect, false);
 
@@ -8,23 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const file = event.target.files[0];
         if (!file) return;
 
-        outputTextarea.value = "Processing...";
+        jsonOutputTextarea.value = "Processing...";
+        manifestOutputPre.textContent = "";
+        outputContainer.style.display = 'block';
 
         try {
             const arrayBuffer = await file.arrayBuffer();
             const midi = new Midi(arrayBuffer);
             const bpm = midi.header.tempos[0]?.bpm || 120;
-            console.log(`Detected BPM: ${bpm}`);
+            const splitPoint = 60; // C4
 
-            // 1. Group notes by start time to identify chords
             const timeMap = new Map();
-            midi.tracks.forEach((track, index) => {
-                const hand = (midi.tracks.length > 1 && index === 1) ? 'left' : 'right';
+            midi.tracks.forEach((track, trackIndex) => {
                 track.notes.forEach(note => {
                     const time = note.time;
-                    if (!timeMap.has(time)) {
-                        timeMap.set(time, []);
+                    if (!timeMap.has(time)) timeMap.set(time, []);
+                    
+                    let hand;
+                    if (midi.tracks.length > 1) {
+                        hand = (trackIndex === 1) ? 'left' : 'right';
+                    } else {
+                        hand = (note.midi < splitPoint) ? 'left' : 'right';
                     }
+
                     timeMap.get(time).push({
                         midi: note.midi,
                         duration: note.duration,
@@ -33,33 +45,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // 2. Sort the events by time
             const sortedTimes = Array.from(timeMap.entries()).sort((a, b) => a[0] - b[0]);
             
-            // 3. Transform the grouped notes into our lesson format
-            const lessonNotes = sortedTimes.map(([time, notesAtTime]) => {
-                const firstNote = notesAtTime[0];
-                return {
-                    keys: notesAtTime.map(n => midiToVexflow(n.midi)), // Create an array of keys for chords
-                    duration: quantizeDuration(firstNote.duration, bpm),
-                    hand: firstNote.hand
-                };
+            const lessonNotes = [];
+            sortedTimes.forEach(([time, notesAtTime]) => {
+                // Separate notes by hand for this specific time event
+                const rightHandNotes = notesAtTime.filter(n => n.hand === 'right');
+                const leftHandNotes = notesAtTime.filter(n => n.hand === 'left');
+
+                if (rightHandNotes.length > 0) {
+                    lessonNotes.push({
+                        keys: rightHandNotes.map(n => midiToVexflow(n.midi)).sort(),
+                        duration: quantizeDuration(rightHandNotes[0].duration, bpm),
+                        hand: 'right'
+                    });
+                }
+                if (leftHandNotes.length > 0) {
+                    lessonNotes.push({
+                        keys: leftHandNotes.map(n => midiToVexflow(n.midi)).sort(),
+                        duration: quantizeDuration(leftHandNotes[0].duration, bpm),
+                        hand: 'left'
+                    });
+                }
             });
 
-            const lessonJson = {
-                title: midi.header.name || "Imported Song",
-                notes: lessonNotes
-            };
+            const title = titleInput.value.trim() || midi.header.name || "Imported Song";
+            generatedFilename = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '.json';
 
-            outputTextarea.value = JSON.stringify(lessonJson, null, 2);
+            const lessonJson = { title: title, notes: lessonNotes };
+            jsonOutputTextarea.value = JSON.stringify(lessonJson, null, 2);
+
+            const manifestEntry = { title: title, type: "song", path: `assets/lessons/${generatedFilename}` };
+            manifestOutputPre.textContent = JSON.stringify(manifestEntry, null, 2) + ',';
+
+            downloadBtn.style.display = 'inline-block';
+            copyManifestBtn.style.display = 'inline-block';
+            copyManifestBtn.textContent = 'Copy Entry';
 
         } catch (e) {
             outputTextarea.value = `Error parsing MIDI file: \n${e.toString()}`;
             console.error(e);
         }
     }
+    
+    downloadBtn.addEventListener('click', () => {
+        const blob = new Blob([jsonOutputTextarea.value], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = generatedFilename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
 
-    // --- Helper Functions ---
+    copyManifestBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(manifestOutputPre.textContent).then(() => {
+            copyManifestBtn.textContent = 'Copied!';
+        });
+    });
 
     function midiToVexflow(midiNote) {
         const noteNames = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
@@ -77,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { duration: quarterNoteDuration / 2, name: '8' },
             { duration: quarterNoteDuration / 4, name: '16' },
         ];
-
         let closest = durationMap[0];
         for (const d of durationMap) {
             if (Math.abs(d.duration - durationInSeconds) < Math.abs(closest.duration - durationInSeconds)) {

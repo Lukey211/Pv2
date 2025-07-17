@@ -10,6 +10,24 @@
       "path": "assets/lessons/beginner-arpeggios.json"
     },
     {
+      "title": "Practice: C-Major Arpeggio",
+      "type": "arpeggio",
+      "config": {
+        "root": "C4",
+        "quality": "major",
+        "octaves": 2
+      }
+    },
+    {
+        "title": "Practice: A-Minor Arpeggio",
+        "type": "arpeggio",
+        "config": {
+            "root": "A3",
+            "quality": "minor",
+            "octaves": 2
+        }
+    },
+    {
       "title": "Flashcards: Treble Clef Notes",
       "type": "flashcard",
       "config": {
@@ -24,5 +42,20 @@
         "clef": "bass",
         "range": ["f/2", "c/4"]
       }
+    },
+    {
+      "title": "Twinkle Little Star",
+      "type": "song",
+      "path": "assets/lessons/twinkle-little-star.json"
+    },
+    {
+      "title": "Falling Apart",
+      "type": "song",
+      "path": "assets/lessons/falling-apart.json"
+    },
+    {
+      "title": "Interstellar",
+      "type": "song",
+      "path": "assets/lessons/interstellar.json"
     }
 ]

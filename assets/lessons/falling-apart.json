@@ -1,0 +1,7684 @@
+{
+  "title": "Falling Apart",
+  "notes": [
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g#/3"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "a#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g/2",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/2",
+        "d#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "f/2",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g#/3"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "f/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "w",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "a#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g#/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "g#/2"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3"
+      ],
+      "duration": "h",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/3",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d#/3",
+        "g/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "h",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/3",
+        "d#/2",
+        "g/2"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/3",
+        "g#/2",
+        "g#/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "a#/3",
+        "d#/3"
+      ],
+      "duration": "q",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "q",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/2",
+        "d/3",
+        "f/3"
+      ],
+      "duration": "w",
+      "hand": "left"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/3"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "c/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "g/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "f/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d/5"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "a#/4"
+      ],
+      "duration": "8",
+      "hand": "right"
+    },
+    {
+      "keys": [
+        "d#/5"
+      ],
+      "duration": "w",
+      "hand": "right"
+    }
+  ]
+}

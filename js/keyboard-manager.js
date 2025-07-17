@@ -49,17 +49,11 @@ export class KeyboardManager {
         const key = this.keyMap.get(noteName);
         if (!key) return;
 
-        // Clear previous actionable states (orange, green, red)
-        key.classList.remove('orange', 'green', 'red');
+        key.classList.remove('orange', 'green');
 
         switch (state) {
             case 'correct':
                 key.classList.add('green');
-                break;
-            case 'incorrect':
-                key.classList.add('red');
-                // Use a timeout to remove the red flash, ensuring the key returns to neutral
-                setTimeout(() => key.classList.remove('red'), 300);
                 break;
             case 'pressed':
                 key.classList.add('orange');
@@ -70,6 +64,15 @@ export class KeyboardManager {
             case 'off':
                 // The initial remove handled this.
                 break;
+        }
+    }
+
+    // New function specifically for flashing red without removing other states
+    flashIncorrect(noteName) {
+        const key = this.keyMap.get(noteName);
+        if (key) {
+            key.classList.add('red');
+            setTimeout(() => key.classList.remove('red'), 300);
         }
     }
 
