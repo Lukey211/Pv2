@@ -12,7 +12,7 @@ async function startExercise(lessonData) {
             const response = await fetch(lessonData.path);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const songData = await response.json();
-            musicEngine.startExercise({ ...lessonData, notes: songData.notes });
+            musicEngine.startExercise({ ...lessonData, ...songData });
         } catch (error) {
             console.error("Could not load song:", error);
         }
@@ -29,6 +29,7 @@ async function initializeApp() {
     const tempoSlider = document.getElementById('tempo-slider');
     const handSelector = document.getElementById('hand-selector');
     const lessonSelector = document.getElementById('lesson-selector');
+    const loopBtn = document.getElementById('loop-btn'); // This line was missing
 
     const onNoteSelected = (noteIndex) => musicEngine.handleNoteSelection(noteIndex);
 
@@ -71,6 +72,12 @@ async function initializeApp() {
     lessonSelector.addEventListener('change', (e) => {
         const selectedLesson = allLessons[e.target.value];
         startExercise(selectedLesson);
+    });
+    
+    // This event listener was missing
+    loopBtn.addEventListener('click', () => {
+        const isLooping = musicEngine.toggleLoop();
+        loopBtn.classList.toggle('active', isLooping);
     });
 }
 

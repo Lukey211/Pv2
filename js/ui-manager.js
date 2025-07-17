@@ -4,24 +4,18 @@ export class UIManager {
     constructor(onNoteClickCallback) {
         this.sheetMusicDiv = document.getElementById('sheet-music-container');
         this.viewerContainer = document.getElementById('viewer-container');
-        this.pageTitle = document.querySelector('h1'); // Get the h1 element
+        this.pageTitle = document.querySelector('h1');
         this.vexNotes = [];
         this.onNoteClickCallback = onNoteClickCallback;
         this.sheetMusicDiv.addEventListener('click', this._handleNoteClick.bind(this));
-    }
-
-    // New method to update the main title
-    updateTitle(title) {
-        if (this.pageTitle) {
-            this.pageTitle.textContent = title;
-        }
     }
 
     _handleNoteClick(event) {
         let target = event.target;
         while (target && target !== this.sheetMusicDiv) {
             if (target.id && target.id.startsWith('vf-note-')) {
-                const index = parseInt(target.id.split('-')[1]);
+                // The fix is here: split('-')[2] correctly gets the index number.
+                const index = parseInt(target.id.split('-')[2]);
                 if (!isNaN(index) && this.onNoteClickCallback) {
                     this.onNoteClickCallback(index);
                 }
@@ -34,6 +28,7 @@ export class UIManager {
     showCheckmarkFeedback(noteIndex) {
         const note = this.vexNotes.find(n => n.noteIndex === noteIndex);
         if (!note || !this.viewerContainer) return;
+
         const noteX = note.getAbsoluteX() + this.sheetMusicDiv.offsetLeft - this.sheetMusicDiv.scrollLeft;
         const noteY = note.getStave().getYForTopText() - 20;
 
@@ -54,18 +49,19 @@ export class UIManager {
         }, 500);
     }
 
-    drawSong(notes, highlightedNoteIndex, loopState = {}) {
+    drawSong(songData, highlightedNoteIndex, loopState = {}) {
         this.sheetMusicDiv.innerHTML = '';
-        if (!notes || notes.length === 0) return;
+        if (this.playhead) this.sheetMusicDiv.appendChild(this.playhead);
+        if (!songData || !songData.notes || songData.notes.length === 0) return;
+
+        const { notes, keySignature, timeSignature } = songData;
 
         this.vexNotes = [];
         const trebleVexNotes = this._getVexNotes(notes, 'right', highlightedNoteIndex, loopState);
         const bassVexNotes = this._getVexNotes(notes, 'left', highlightedNoteIndex, loopState);
 
-        if (trebleVexNotes.length === 0 && bassVexNotes.length === 0) return;
-
         const totalBeats = this._getTotalBeats(notes);
-        if (totalBeats === 0) return; // Avoid errors on empty voices
+        if (totalBeats === 0) return;
 
         const voiceConfig = { num_beats: totalBeats, beat_value: 4 };
         const trebleVoice = new VF.Voice(voiceConfig).addTickables(trebleVexNotes);
@@ -78,8 +74,8 @@ export class UIManager {
         renderer.resize(totalWidth, 250);
         const context = renderer.getContext();
         
-        const trebleStave = new VF.Stave(10, 40, totalWidth).addClef("treble").addTimeSignature("4/4").setContext(context).draw();
-        const bassStave = new VF.Stave(10, 140, totalWidth).addClef("bass").addTimeSignature("4/4").setContext(context).draw();
+        const trebleStave = new VF.Stave(10, 40, totalWidth).addClef("treble").addKeySignature(keySignature || 'C').addTimeSignature(timeSignature || '4/4').setContext(context).draw();
+        const bassStave = new VF.Stave(10, 140, totalWidth).addClef("bass").addKeySignature(keySignature || 'C').addTimeSignature(timeSignature || '4/4').setContext(context).draw();
         new VF.StaveConnector(trebleStave, bassStave).setType('brace').setContext(context).draw();
 
         const trebleBeams = VF.Beam.generateBeams(trebleVexNotes.filter(n => !n.isRest()));
@@ -102,10 +98,10 @@ export class UIManager {
                 const staveNote = new VF.StaveNote({ keys: note.keys, duration: note.duration, clef });
                 staveNote.attrs.id = `note-${index}`; 
                 
-                if (loopState.enabled && index >= loopState.start && index <= loopState.end) {
+                if (loopState && loopState.enabled && index >= loopState.start && index <= loopState.end) {
                     staveNote.setStyle({ fillStyle: '#D3D3D3', strokeStyle: '#D3D3D3' });
                 }
-                if (loopState.selectionMode !== 'inactive' && index === loopState.start) {
+                if (loopState && loopState.selectionMode !== 'inactive' && index === loopState.start) {
                      staveNote.setStyle({ fillStyle: '#FBC02D', strokeStyle: '#FBC02D' });
                 }
                 if (index === highlightedNoteIndex) {
