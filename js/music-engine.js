@@ -42,14 +42,11 @@ export class MusicEngine {
     _generateFlashcard() {
         this.stop();
         const { clef, range } = this.exerciseConfig;
-        
         const minMidi = Tone.Midi(this.vexflowToTone(range[0])).toMidi();
         const maxMidi = Tone.Midi(this.vexflowToTone(range[1])).toMidi();
         const randomMidi = Math.floor(Math.random() * (maxMidi - minMidi + 1)) + minMidi;
-        
         const vexKey = this.midiToVexflow(randomMidi);
         const hand = clef === 'bass' ? 'left' : 'right';
-
         const flashcardNote = [{ keys: [vexKey], duration: 'w', hand: hand }];
         this.loadSong(flashcardNote, false);
     }
@@ -70,9 +67,7 @@ export class MusicEngine {
         this.stop();
         this.playbackState = 'playing';
         this.keyboardManager.clearAllHighlights('blue');
-        
         const notesToPlay = (this.practiceHand === 'both') ? this.song : this.song.filter(note => note.hand === this.practiceHand);
-        
         let cumulativeTime = 0;
         const partEvents = notesToPlay.map(note => {
             const durationInSeconds = Tone.Time(this.durationToTone(note.duration)).toSeconds();
@@ -80,11 +75,9 @@ export class MusicEngine {
             cumulativeTime += durationInSeconds;
             return event;
         });
-
         this.songPart = new Tone.Part((time, value) => {
             const notesInChord = value.note.keys.map(key => this.vexflowToTone(key));
             this.sampler.triggerAttackRelease(notesInChord, value.duration, time);
-            
             Tone.Draw.schedule(() => {
                 this.uiManager.drawSong(this.song, value.originalIndex, this.loop);
                 this.uiManager.scrollToNote(value.originalIndex);
@@ -106,7 +99,6 @@ export class MusicEngine {
             this.songPart.start(0);
             Tone.Transport.scheduleOnce(() => this.stop(), cumulativeTime);
         }
-        
         Tone.Transport.start();
     }
 
@@ -165,26 +157,20 @@ export class MusicEngine {
 
     handleUserKeyPress(midiNote, isNoteOn) {
         const noteName = Tone.Midi(midiNote).toNote();
-        
         if (isNoteOn) {
             this.sampler.triggerAttack(noteName);
-
-            // Determine the visual state of the key press
             const expectedNote = this.song ? this.song[this.currentNoteIndex] : null;
-            let keyState = 'pressed'; // Default to orange for any press
-            
+            let keyState = 'pressed';
             if (expectedNote && (this.practiceHand === 'both' || expectedNote.hand === this.practiceHand)) {
                 const expectedKeys = expectedNote.keys.map(k => this.vexflowToTone(k));
                 if (expectedKeys.includes(noteName)) {
-                    keyState = 'correct'; // If it's an expected note, make it green
+                    keyState = 'correct';
                 }
             }
             this.keyboardManager.setKeyState(noteName, keyState);
-        } else { // Note Off
+        } else {
             this.sampler.triggerRelease(noteName);
-            this.keyboardManager.setKeyState(noteName, 'off'); // Turn off highlight
-            
-            // For chord logic, remove the note from our "held" set
+            this.keyboardManager.setKeyState(noteName, 'off');
             const noteNameOnly = this.midiToVexflow(midiNote).split('/')[0];
             this.heldChordNotes.delete(noteNameOnly);
         }
@@ -192,19 +178,15 @@ export class MusicEngine {
 
     handleNoteInput(midiNote) {
         if (this.playbackState !== 'waiting' || !this.song || !this.song[this.currentNoteIndex]) return;
-        
         const expectedNote = this.song[this.currentNoteIndex];
         if (this.practiceHand !== 'both' && expectedNote.hand !== this.practiceHand) {
             this.playOtherHandNote(expectedNote);
             return;
         }
-
         const playedNoteName = this.midiToVexflow(midiNote).split('/')[0];
         const expectedNoteNames = expectedNote.keys.map(k => k.split('/')[0]);
-        
         if (expectedNoteNames.includes(playedNoteName)) {
             this.uiManager.showCheckmarkFeedback(this.currentNoteIndex);
-            
             if (this.currentMode === 'flashcard') {
                 setTimeout(() => this._generateFlashcard(), 600);
             } else {
@@ -219,8 +201,7 @@ export class MusicEngine {
                 }
             }
         } else {
-            // Flash the key red for an incorrect note
-            this.keyboardManager.setKeyState(Tone.Midi(midiNote).toNote(), 'incorrect');
+            this.keyboardManager.flashIncorrect(Tone.Midi(midiNote).toNote());
         }
     }
     
@@ -246,7 +227,6 @@ export class MusicEngine {
         this.uiManager.drawSong(this.song, this.currentNoteIndex, this.loop);
         this.uiManager.scrollToNote(this.currentNoteIndex);
         this.updateKeyboardForNextNote();
-        
         const nextNote = this.song[this.currentNoteIndex];
         if (this.practiceHand !== 'both' && nextNote && nextNote.hand !== this.practiceHand) {
             setTimeout(() => this.playOtherHandNote(nextNote), 200);
