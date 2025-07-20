@@ -1,0 +1,6 @@
+12:02:56.662
+Object { idString: "uninitialized", sourceMeasures: (53) […], repetitions: [], dynListStaves: [], timestampSortedDynamicExpressionsList: [], timestampSortedTempoExpressionsList: [], instrumentalGroups: (1) […], instruments: (1) […], musicPartManager: {…}, musicSheetErrors: {…}, … }
+importer.js:79:17
+12:03:31.549
+Object { idString: "uninitialized", sourceMeasures: (53) […], repetitions: [], dynListStaves: [], timestampSortedDynamicExpressionsList: [], timestampSortedTempoExpressionsList: [], instrumentalGroups: (1) […], instruments: (1) […], musicPartManager: {…}, musicSheetErrors: {…}, … }
+importer.js:79:17

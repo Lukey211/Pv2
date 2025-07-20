@@ -57,5 +57,10 @@
       "title": "Interstellar",
       "type": "song",
       "path": "assets/lessons/interstellar.json"
+    },
+    {
+      "title": "Comptine d'un Autre été: L'Après-Midi",
+      "type": "song",
+      "path": "assets/lessons/comptine-dun-autre-t-laprs-yann-tiersen.json"
     }
 ]
